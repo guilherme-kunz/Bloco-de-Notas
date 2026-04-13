@@ -1,14 +1,17 @@
 package com.guilhermekunz.blocodenotas.domain.use_case
 
-import androidx.room3.Entity
-import androidx.room3.PrimaryKey
+import com.guilhermekunz.blocodenotas.domain.model.Note
+import com.guilhermekunz.blocodenotas.domain.repository.NoteRepository
+import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.map
+import javax.inject.Inject
 
-@Entity(tableName = "notes")
-data class NoteEntity(
-    @PrimaryKey(autoGenerate = true) val id: Int = 0,
-    val title: String,
-    val content: String?,
-    val checklistJson: String?,
-    val type: String,
-    val timestamp: Long
-)
+class GetNotesUseCase @Inject constructor(
+    private val repository: NoteRepository
+) {
+    operator fun invoke(): Flow<List<Note>> {
+        return repository.getNotes().map { notes ->
+            notes.sortedByDescending { it.timestamp }
+        }
+    }
+}
