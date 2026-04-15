@@ -1,11 +1,12 @@
 package com.guilhermekunz.blocodenotas.data.local
 
-import androidx.room3.Dao
-import androidx.room3.Delete
-import androidx.room3.Insert
-import androidx.room3.OnConflictStrategy
-import androidx.room3.Query
-import com.guilhermekunz.blocodenotas.domain.use_case.NoteEntity
+
+import androidx.room.Dao
+import androidx.room.Delete
+import androidx.room.Insert
+import androidx.room.OnConflictStrategy
+import androidx.room.Query
+import com.guilhermekunz.blocodenotas.data.local.entity.NoteEntity
 import kotlinx.coroutines.flow.Flow
 
 @Dao

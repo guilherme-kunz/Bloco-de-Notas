@@ -4,7 +4,7 @@ package com.guilhermekunz.blocodenotas.data.local
 import androidx.room.Database
 import androidx.room.RoomDatabase
 import androidx.room.TypeConverters
-import com.guilhermekunz.blocodenotas.domain.use_case.NoteEntity
+import com.guilhermekunz.blocodenotas.data.local.entity.NoteEntity
 
 @Database(
     entities = [NoteEntity::class],

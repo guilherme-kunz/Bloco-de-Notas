@@ -1,8 +1,8 @@
 package com.guilhermekunz.blocodenotas.data.local
 
+import androidx.room.TypeConverter
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
-import androidx.room3.TypeConverter
 import com.guilhermekunz.blocodenotas.domain.model.ChecklistItem
 
 class NoteConverters {
