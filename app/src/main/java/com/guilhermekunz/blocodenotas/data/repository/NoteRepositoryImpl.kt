@@ -1,9 +1,9 @@
 package com.guilhermekunz.blocodenotas.data.repository
 
 import com.guilhermekunz.blocodenotas.data.local.NoteDao
+import com.guilhermekunz.blocodenotas.data.local.entity.NoteEntity
 import com.guilhermekunz.blocodenotas.domain.model.Note
 import com.guilhermekunz.blocodenotas.domain.repository.NoteRepository
-import com.guilhermekunz.blocodenotas.domain.use_case.NoteEntity
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
 
